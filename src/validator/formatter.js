@@ -11,4 +11,4 @@ const uppertolower = function (str) {
 }
 
 
-module.exports = { trimit, uppertolower, toLower }
+module.exports = { trimit, uppertolower }

@@ -19,7 +19,15 @@ router.get('/test-me', function (req, res) {
 });
 
 router.get('/test-me1', function (req, res) {
+    
     res.send('My second ever api!')
+});
+
+router.get('/movies/:indexNumber', function (req, res) {
+    let index = req.params.indexNumber
+  let movies =  ['Rang de basanti', 'The shining', 'Lord of the rings', 'Batman begins']
+if(index <movies.length && index >= 0){
+ res.send(movies[index])}
 });
 
 router.get('/test-me2', function (req, res) {
