@@ -1,4 +1,5 @@
 const express = require('express');
+const lodash = require ('lodash')
 
 const shrimodule = require('../logger/logger')
 const shri2module = require('./../util/helper')
@@ -18,25 +19,39 @@ router.get('/test-me', function (req, res) {
     res.send('My first ever api!')
 });
 
-router.get('/test-me1', function (req, res) {
-    res.send('My second ever api!')
+router.get('/hello', function (req, res) {
+    
+    
+    let arr1 = lodash.chunk(["january","february","march","april","may","june","july","august","september","octomber","november","december"] ,2)
+    console.log(arr1)
+    res.send('my array !')
 });
 
-router.get('/test-me2', function (req, res) {
-    res.send('My third api!')
-});
 
-router.get('/test-me3', function (req, res) {
-    res.send('My 4th api!')
-});
 
-router.get('/test-me4', function (req, res) {
-    res.send('My last api!')
-});
-router.get('/shrikant', function (req, res) {
 
-    res.send("hello world")
-})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 module.exports = router;
 // adding this comment for no reason
