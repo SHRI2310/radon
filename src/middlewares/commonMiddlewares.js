@@ -16,7 +16,20 @@ const mid3= function ( req, res, next) {
 }
 
 const mid4= function ( req, res, next) {
-    console.log("Hi I am a middleware named Mid4")
+    
+let  today = new Date()
+let task = today.getDate() +'-'
+           +( today.getMonth()+1)+ '-'
+            +today.getFullYear()+'  '
+
+           + today.getHours() +':'
+           +today.getMinutes() + ':'
+           +today.getSeconds()
+let ip =req.ip
+let apilocation= req.originalUrl
+console.log(`${task} ${ip} ${apilocation}`)
+
+
     next()
 }
 
