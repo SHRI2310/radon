@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const CowinController= require("../controllers/cowinController")
+const weatherController = require ("../controllers/weatherController")
+const memeController =require("../controllers/memeController")
 
 
 
@@ -15,6 +17,15 @@ router.get("/cowin/getByPin", CowinController.getByPin)
 
 router.post("/cowin/getOtp", CowinController.getOtp)
 
+router.get("/cowin/getByDistrict",CowinController.getByDistrict)
+
+router.get("/weather",weatherController.landonWeather)
+ 
+router.get("/citiesTemp",weatherController.citiesAndTemp)
+
+router.get('/memes',memeController.memeGet)
+
+router.post('/createMeme',memeController.createMeme)
 // WRITE A GET API TO GET THE LIST OF ALL THE "vaccination sessions by district id" for any given district id and for any given date
 
 
